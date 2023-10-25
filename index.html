@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html>
-<head>
-</head>
 <body>
     <div id="json-output"></div>
 
     <script>
-        // Use JavaScript to fetch JSON data from an external source
-        fetch('/game_index.json')  // Replace with the URL of your JSON data
+        // Use JavaScript to fetch JSON data from an external file
+        fetch('/game_index.json')
             .then(response => response.json())
             .then(data => {
                 // Display the JSON data on the page
