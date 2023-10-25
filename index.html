@@ -1,7 +1,21 @@
 <!DOCTYPE html>
 <html>
+<head>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <div id="json-output"></div>
+
+    <script>
+        // Use JavaScript to fetch JSON data from an external source
+        fetch('/game_index.json')  // Replace with the URL of your JSON data
+            .then(response => response.json())
+            .then(data => {
+                // Display the JSON data on the page
+                document.getElementById('json-output').innerText = JSON.stringify(data, null, 2);
+            })
+            .catch(error => {
+                console.error('Error fetching JSON data:', error);
+            });
+    </script>
 </body>
 </html>
